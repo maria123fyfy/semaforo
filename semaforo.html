@@ -30,10 +30,26 @@ var semaforo = "verde";
         } else{
             if (semaforo == "amarelo"){
                 img.setAttribute('src','vermelho.png');
+            tempo = 10000;
+            semaforo = "vermelho";
             }
-        }
+            else{
+                if (semaforo == "vermelho"){
+            img.setAttribute('src', 'amarelo.png');
+            semaforo = "amarelo 2 ";
+            tempo = 1000;
+                }
+                else{
+                    if (semaforo == "amarelo 2 "){
+            img.setAttribute('src', 'verde.png');
+            semaforo = "verde";
+            tempo = 1000;
+                    }
+                }
+            }
+            
     }
-
+    }
 
 </script>
 
