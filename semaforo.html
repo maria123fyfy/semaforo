@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+<p id="botao">    </p>   
+<p id="segundos">   </p>
+
+<img id="MinhaImagem" src="verde.png" 
+style="width: 100px;">
+
+<script>
+var tempo = 5000; //segundos
+var timer=setInterval(controle, tempo);
+var img = document.querySelector("#MinhaImagem");
+var semaforo = "verde";
+
+    function controle(){
+        if(semaforo == "verde"){
+        img.setAttribute('src', 'amarelo.png' );
+        semaforo = "amarelo";
+        tempo = 1000;        
+        } else{
+            if (semaforo == "amarelo"){
+                img.setAttribute('src','vermelho.png');
+            }
+        }
+    }
+
+
+</script>
+
+
+    
+</body>
+</html>
